@@ -7,53 +7,50 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## 🚀 Successfully Installed Laravel 12.48.1
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Student Information
+- **Name:** Alther Adrian P. Liga
+- **Course:** BSIT
+- **Year:** 3rd Year
+- **Project:** Laravel Application for Integrative Programming & Tech
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Project Screenshots
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+#### 1. Laravel Welcome Page (Successfully Running)
+![Laravel Welcome Page](screenshots/ss1.png)
 
-## Learning Laravel
+#### 2. Custom API Route Working
+![API Route Success](screenshots/ss2.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+#### 3. Web Route Working
+![Web Route Success](screenshots/ss3.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### 4. Project Structure
+![Project Structure](screenshots/ss4.png)
 
-## Laravel Sponsors
+### Installation Success Details
+✅ **PHP Version:** 8.5.1  
+✅ **Laravel Version:** 12.48.1  
+✅ **Database:** SQLite (configured)  
+✅ **Routes Working:** `/`, `/api/user`, custom routes  
+✅ **Server Running:** `php artisan serve`  
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Custom Routes Implemented
+```php
+// Web Routes (routes/web.php)
+Route::get('/alther', function () {
+    return 'Hello World! My name is Alther Adrian P. Liga';
+});
 
-### Premium Partners
+Route::get('/profile', function () {
+    return '<h1>Alther Adrian P. Liga</h1><p>3rd Year BSIT</p>';
+});
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+// API Routes (routes/api.php)  
+Route::get('/user', function (Request $request) {
+    return response()->json([
+        'message' => 'Hello World! My name is Alther Adrian P. Liga',
+        'data' => $request->user()
+    ]);
+});
